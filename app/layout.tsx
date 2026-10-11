@@ -1,4 +1,5 @@
-import { Geist, Geist_Mono, Outfit, Oxanium } from "next/font/google"
+import type { Metadata } from "next"
+import { Geist_Mono, Outfit, Oxanium } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -12,6 +13,15 @@ const fontMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
 })
+
+export const metadata: Metadata = {
+  title: {
+    default: "Mara Chen — Photography",
+    template: "%s · Mara Chen",
+  },
+  description:
+    "Portrait and documentary photography by Mara Chen. Selected work, session rates, and contact.",
+}
 
 export default function RootLayout({
   children,
