@@ -7,7 +7,7 @@ export const site = {
 /** Replace these URLs with your own image files (see README). */
 export const placeholderImages = {
   hero: {
-    src: "https://images.unsplash.com/photo-1493863641943-86b64bc07a55?auto=format&fit=crop&w=2400&q=80",
+    src: "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=2400&q=80",
     alt: "Soft light on a camera lens — placeholder hero",
     note: "lib/site.ts → placeholderImages.hero",
   },
