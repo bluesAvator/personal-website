@@ -1,21 +1,43 @@
-# Next.js template
+# Personal website — photography portfolio
 
-This is a Next.js template with shadcn/ui.
-
-## Adding components
-
-To add components to your app, run the following command:
+Next.js app initialized with:
 
 ```bash
-npx shadcn@latest add button
+pnpm dlx shadcn@latest init --preset b5rR41Mtnc --template next --pointer
 ```
 
-This will place the ui components in the `components` directory.
+Typography comes from the template: **Outfit** (body) and **Oxanium** (headings).
 
-## Using components
+## Develop
 
-To use the components in your app, import them as follows:
-
-```tsx
-import { Button } from "@/components/ui/button";
+```bash
+pnpm install
+pnpm dev
 ```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+## Customize copy and contact
+
+Edit `lib/site.ts` for your name, tagline, and email (`site.email` is used in the header, hero, contact section, and footer).
+
+## Replace placeholder photos
+
+All stand-in images are defined in `lib/site.ts`. Swap each `src` for a path under `public/` (for example `/photos/hero.jpg`) or your own hosted URL (add the hostname to `next.config.ts` if needed).
+
+| Location on site | Config key |
+| --- | --- |
+| Home hero (large image) | `placeholderImages.hero` |
+| About section portrait | `placeholderImages.portrait` |
+| Gallery item 01 — Morning commute | `gallery[0]` |
+| Gallery item 02 — Quiet room | `gallery[1]` |
+| Gallery item 03 — Coastline | `gallery[2]` |
+| Gallery item 04 — Studio session | `gallery[3]` |
+| Gallery item 05 — City after rain | `gallery[4]` |
+| Gallery item 06 — Golden hour | `gallery[5]` |
+
+Sources today: [Unsplash](https://unsplash.com) and [picsum.photos](https://picsum.photos).
+
+## Pricing
+
+Session packages and rates live in `pricingTiers` inside `lib/site.ts`. The pricing section uses a summary table on desktop and detail cards on all viewports.
